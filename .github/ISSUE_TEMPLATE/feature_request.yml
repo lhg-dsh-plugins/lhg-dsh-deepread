@@ -1,0 +1,39 @@
+name: Focused improvement
+description: Propose a scoped improvement to DeepRead
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Reader problem
+      description: Describe the reading or verification problem before proposing a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current workaround
+      description: How do you handle this today?
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the smallest useful result and which host(s) need it.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Example or evidence
+      description: Link a public example or provide a small, non-sensitive input/output sketch.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope checks
+      options:
+        - label: I checked the README and existing Issues for this capability.
+          required: true
+        - label: This request does not require posting private or copyrighted source material.
+          required: true

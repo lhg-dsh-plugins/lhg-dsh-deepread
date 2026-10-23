@@ -1,0 +1,62 @@
+name: Bug report
+description: Report a reproducible problem in the Host tool, packaged skill, PDF pipeline, or Web client
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Remove private or copyrighted source material before posting.
+  - type: dropdown
+    id: host
+    attributes:
+      label: Host
+      options:
+        - Portable Agent Skill (Codex / Claude Code / other)
+        - DeepSeek Harness Web
+        - DeepSeek Harness headless
+        - dsh-TUI
+        - Packaging or installation
+        - Unsure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: DeepRead version or commit
+      placeholder: "1.0.0 or commit SHA"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Include the smallest safe input, exact command or prompt, and what happened.
+      placeholder: |
+        1. Install ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and logs
+      description: Include Node.js version, OS, host version, and relevant sanitized logs. Never include API keys or private documents.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing Issues and did not find the same problem.
+          required: true
+        - label: I removed credentials, private documents, and sensitive data.
+          required: true
